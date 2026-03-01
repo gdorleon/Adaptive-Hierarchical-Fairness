@@ -1,0 +1,31 @@
+# ML100K configuration
+dataset: ml100k
+data_path: data/processed/ml100k.pkl
+
+# Re-ranking
+beta: 0.6          # fairness weight (tuned on validation)
+gamma: 0.1         # position discount exponent
+k: 20              # recommendation list length
+topn: 100          # candidate pool size per user
+
+# Bayesian model
+lambda_decay: 0.05 # time decay for interaction history
+kappa: 0.5         # uncertainty scale for blending (Eq. 5)
+svi_steps: 50000   # SVI iterations
+lr: 0.01           # Adam learning rate
+batch_size: 256    # SVI minibatch size
+sigma_global: 1.0
+sigma_group: 0.5
+sigma_ind: 0.3
+
+# Hierarchy
+n_super: 6         # number of super-genre clusters for agglomerative clustering
+
+# Sensitive attributes
+sensitive_cols:
+  - gender
+  - age_group
+
+# Evaluation
+n_runs: 5
+seeds: [42, 43, 44, 45, 46]
