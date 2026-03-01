@@ -25,7 +25,7 @@ AHF reduces CC disparity **31–48%** relative to the strongest prior baseline w
 ## Installation
 
 ```bash
-git clone https://github.com/yourname/ahf
+git clone https://github.com/xxx/ahf
 cd ahf
 pip install -r requirements.txt
 ```
