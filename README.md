@@ -109,6 +109,6 @@ svi_steps: 50000   # variational inference steps
 @inproceedings{ahf2024,
   title={Beyond Static Aggregation: Adaptive Hierarchical Fairness for Recommendation Systems},
   booktitle={...},
-  year={2024}
+  year={2026}
 }
 ```
